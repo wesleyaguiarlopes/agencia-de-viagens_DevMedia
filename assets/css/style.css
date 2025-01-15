@@ -20,24 +20,10 @@
     }
 }
 
-@media (max-width:768px) {
-    #cabecalho {
-        padding: 10px;
-
-        img {
-            height: 32px;
-        }
-
-        h1 {
-            font-size: 25px;
-        }
-    }
-}
-
 #secao-oracamento {
     display: flex;
     min-height: 100vh;
-    padding: 50px 10px;
+    padding: 50px 10%;
     align-items: center;
     background-size: cover;
     justify-content: center;
@@ -47,7 +33,6 @@
 
     .area-formulario {
         width: 100%;
-        margin: auto 10%;
 
         h1 {
             padding: 10px;
@@ -138,6 +123,111 @@
     }
 }
 
+#conteudos {
+    padding: 0 10%;
+    min-height: 100vh;
+    background-color: #EAEAEA;
+
+    p {
+        padding: 10px 0;
+    }
+
+    .ofertas {
+        padding: 20px 0;
+
+        .grupo-ofertas {
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                width: 100%;
+                padding: 5px 10px;
+                background-color: #000000a2;
+            }
+
+            .cartao {
+                display: flex;
+                align-items: end;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .c1 {
+                height: 400px;
+                width: calc(50% - 10px);
+                background-image: url('/assets/imagens/rio.jpg');
+            }
+
+            .grupo-cartoes{
+                gap: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                width: calc(50% - 10px);
+
+                .c2, .c3, .c4, .c5 {
+                    width: calc(50% - 10px);
+                    height: calc(50% - 10px);
+                }
+
+                .c2 {
+                    background-image: url('/assets/imagens/manaus.jpg');
+                }
+
+                .c3 {
+                    background-image: url('/assets/imagens/saopaulo.jpg');
+                }
+
+                .c4 {
+                    background-image: url('/assets/imagens/niteroi.jpg');
+                }
+
+                .c5 {
+                    background-image: url('/assets/imagens/maranhao.jpg');
+                }
+            }
+        }
+    }
+
+    .anuncios {
+        padding: 20px 0;
+
+        .grupo-anuncios {
+            display: flex;
+            justify-content: space-between;
+
+            .grupo-cartoes-info {
+                width: calc(50% - 10px);
+
+                .cartoes-anuncios {
+                    height: 400px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                .ca1 {
+                    background-image: url('/assets/imagens/lencol.jpg');
+                }
+
+                .ca2 {
+                    background-image: url('/assets/imagens/goias.jpg');
+                }
+
+                .informacoes {
+                    background-color: #fff;
+                    margin-top: 5px;
+                    padding: 10px;
+                }
+
+                .informacoes p:first-of-type {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
 #rodape {
     color: #fff;
     display: flex;
@@ -167,6 +257,60 @@
 }
 
 @media (max-width: 768px) {
+    #cabecalho {
+        padding: 10px;
+
+        img {
+            height: 32px;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+    }
+
+    #secao-oracamento {
+        padding: 50px 10px;
+    }
+
+    #conteudos {
+        padding: 0 20px;
+
+        .ofertas {
+            .grupo-ofertas {
+                flex-direction: column;
+                gap: 10px;
+
+                .cartao {
+                    width: 100%;
+                    height: 200px;
+                }
+
+                .grupo-cartoes{
+                    width: 100%;
+                    flex-direction: column;
+
+                    .c2, .c3, .c4, .c5 {
+                        width: 100%;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+
+        .anuncios {
+
+            .grupo-anuncios {
+                gap: 20px;
+                flex-direction: column;
+
+                .grupo-cartoes-info {
+                    width: calc(100%);
+                }
+            }
+        }
+    }
+
     #rodape {
         flex-direction: column;
         justify-content: center;
